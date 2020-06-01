@@ -1,0 +1,27 @@
+1) n=int(input())
+A=list(map(int,input().strip().split()))[:n]
+B=A
+B.reverse()
+for i in range(n):
+    A[i]+A[n-1-i]
+    print(A[i]+A[n-1-i],end=' ')
+
+
+2) a = list(map(int, input().split()))
+c=0
+j=0
+for i in range(len(a)):
+    j=0
+    while j<len(a)-1-i :
+      if(a[j]>a[j+1]):
+        c=a[j]
+        a[j]=a[j+1]
+        a[j+1]=c
+      j=j+1
+print(a[len(a)-2],end=' ')
+print(a[1],end=' ')
+
+3) a = list(map(int, input().split()))
+for i in range(len(a)):
+  if(a[i]%5!=0):
+    print(a[i],end=' ')
